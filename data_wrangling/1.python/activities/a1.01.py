@@ -19,6 +19,9 @@ if __name__=='__main__':
         l1 = set_random_list(l)
         l2 = by_three(l1)
         dif.append(abs(len(l1) - len(l2)))
+    l12 = list(set(l1))
     
+    print(l12)
     print(dif)
     print(f'the mean is {find_mean(dif)}')
+
