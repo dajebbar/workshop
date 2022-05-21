@@ -19,3 +19,7 @@ i = 0
 while i < len(ssn3):
     print(ssn3[i])
     i += 1
+
+# Search all the social security numbers with the number 5 in them
+ssn_with5 = [item for item in ssn3 if '5' in item]
+print(f'social security containing # 5:\n{ssn_with5}')
