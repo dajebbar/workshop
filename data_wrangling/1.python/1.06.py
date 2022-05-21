@@ -10,3 +10,12 @@ stocks = {
     "WMIH Corp.":"$247.66M",
     "Comerica Incorporated":"n/a",
 }
+
+print(stocks["WMIH Corp."])
+print(stocks.get("WMIH Corp", 'not found'))
+stocks["WMIH Corp."] = "$300M"
+
+# remove $ and M
+
+stocks_clean = {k:v.replace('$', '').replace('M', '').replace('B', '') for k, v in stocks.items()}
+print(stocks_clean)
