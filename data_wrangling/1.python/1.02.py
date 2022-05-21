@@ -13,3 +13,9 @@ print(ssn2)
 # generate a list with a comprehension list
 ssn3 = [f'soc:{item}' for item in ssn2]
 print(ssn3)
+
+# iterate list with while loop
+i = 0
+while i < len(ssn3):
+    print(ssn3[i])
+    i += 1
