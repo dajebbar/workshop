@@ -88,4 +88,7 @@ for w in pp_list:
 
 print(uniq)
 
+top_25 = sorted(uniq)[:25] 
+print(top_25)
+
 
