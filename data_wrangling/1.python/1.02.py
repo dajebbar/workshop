@@ -28,3 +28,7 @@ print(f'social security containing # 5:\n{ssn_with5}')
 ssn_4 = ["102-90-0314" , "247-17-2338" , "318-22-2760"]
 ssn_5 = ssn_4 + ssn
 print(ssn_5)
+
+# Extend a string using the extend keyword
+ssn2.extend(ssn_4)
+print(ssn2)
