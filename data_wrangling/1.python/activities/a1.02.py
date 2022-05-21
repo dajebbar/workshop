@@ -88,7 +88,7 @@ for w in pp_list:
 
 print(uniq)
 
-top_25 = sorted(uniq)[:25] 
+top_25 = sorted(uniq.items(), key=lambda k: k[-1], reverse=True)[:25] 
 print(top_25)
 
 
