@@ -1,3 +1,6 @@
+import re
+
+
 p_p = '''
 
 It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.
@@ -72,4 +75,6 @@ Mr. Bennet was so odd a mixture of quick parts, sarcastic humour, reserve, and c
 
 print(f'Length of txt: {len(p_p)}, type of txt: {type(p_p)}')
 
-pp = p_p.replace('\n', '').replace('.')
+pp = re.sub(r'[^\w]', ' ', p_p)
+
+print(pp)
