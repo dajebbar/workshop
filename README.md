@@ -1,2 +1,2 @@
-# workshop
-Data Science &amp; Artificial Intelligence
+# Workshops
+Data Science &amp; Artificial Intelligence workshops
