@@ -76,5 +76,16 @@ Mr. Bennet was so odd a mixture of quick parts, sarcastic humour, reserve, and c
 print(f'Length of txt: {len(p_p)}, type of txt: {type(p_p)}')
 
 pp = re.sub(r'[^\w]', ' ', p_p)
+pp_list = pp.split()
+uniq = dict.fromkeys(pp_list)
+print(len(list(uniq.keys())))
 
-print(pp)
+for w in pp_list:
+    if uniq[w] == None:
+        uniq[w] = 1
+    else:
+        uniq[w] += 1
+
+print(uniq)
+
+
