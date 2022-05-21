@@ -18,4 +18,8 @@ stocks["WMIH Corp."] = "$300M"
 # remove $ and M
 
 stocks_clean = {k:v.replace('$', '').replace('M', '').replace('B', '') for k, v in stocks.items()}
-print(stocks_clean)
+# print(stocks_clean)
+
+# split price and value(M, B)
+stocks_clean_2 = {k: [v[:-1].replace('$', ''), v[-1]] for k, v in stocks.items()}
+print(stocks_clean_2)
