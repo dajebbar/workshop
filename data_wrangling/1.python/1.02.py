@@ -32,3 +32,9 @@ print(ssn_5)
 # Extend a string using the extend keyword
 ssn2.extend(ssn_4)
 print(ssn2)
+
+# loop over the first list and create a nested list inside that loop that
+# goes over the second list
+for x in ssn2:
+    for y in ssn_5:
+        print(f'{x} , {y}')
