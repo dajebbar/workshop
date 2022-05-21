@@ -9,3 +9,7 @@ for item in ssn:
     ssn2.append(item)
 
 print(ssn2)
+
+# generate a list with a comprehension list
+ssn3 = [f'soc:{item}' for item in ssn2]
+print(ssn3)
