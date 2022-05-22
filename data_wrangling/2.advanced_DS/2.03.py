@@ -20,3 +20,5 @@ forms, both structured and unstructured,similar to data mining
 
 print(f'the length: {len(wikipedia_datascience)}')
 
+wd_lst = wikipedia_datascience.split()
+print(wd_lst)
