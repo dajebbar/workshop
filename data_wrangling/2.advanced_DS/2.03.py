@@ -31,3 +31,8 @@ for word in wd_lst:
         print(word[-1:1])
 
 print(url_stack)
+
+for i in range(0, len(url_stack)):
+    print(stack_pop(url_stack))
+
+print(url_stack)
