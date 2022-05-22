@@ -22,3 +22,5 @@ print(f'the length: {len(wikipedia_datascience)}')
 
 wd_lst = wikipedia_datascience.split()
 print(wd_lst)
+
+print(f'length of list: {len(wd_lst)}')
