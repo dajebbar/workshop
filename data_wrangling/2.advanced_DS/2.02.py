@@ -11,3 +11,6 @@ print(stack)
 
 tos = stack.pop()
 print(tos)
+
+stack.append("Hello@test.com")
+print(stack)
