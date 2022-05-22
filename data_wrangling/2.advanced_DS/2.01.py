@@ -12,3 +12,8 @@ print(size_big_lst)
 small_lst = repeat(1, times=int(1e7))
 size_small_lst = getsizeof(small_lst)
 print(size_small_lst)
+
+for index, item in enumerate(small_lst, 1):
+    print(item, end=' ')
+    if index > 20:
+        break
