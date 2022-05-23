@@ -9,3 +9,7 @@ print(list_2)
 
 array_2 = array_1 + array_1
 print(array_2)
+
+data = np.genfromtxt('../../datafiles/numbers.csv', delimiter=',', names=['nums'])
+data = data.astype('float64')
+print(data+data)
