@@ -7,3 +7,4 @@ list2d = df.values
 mat1 = np.array(list2d)
 
 print(mat1.shape)
+print(f'dimension: {mat1.ndim}')
