@@ -13,4 +13,5 @@ print('\n*** * 9\n')
 
 # find the sine of arr5
 
-print(np.sin(arr5))
+print(np.sin(arr5[:5]))
+print(np.log(arr5[:5]))
