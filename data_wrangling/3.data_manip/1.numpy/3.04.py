@@ -15,3 +15,4 @@ print('\n*** * 9\n')
 
 print(np.sin(arr5[:5]))
 print(np.log(arr5[:5]))
+print(np.exp(arr5[:5]))
