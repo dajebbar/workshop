@@ -34,3 +34,11 @@ mat_1 = np.random.randint(10, 100, 15).reshape(3, 5)
 
 print(f'Matrix of random 2-digit numbers\n{mat_1}')
 print(f'\nElements greater than 50\n{mat_1[mat_1 > 50]}')
+
+mat1 = np.random.randint(1,10, 9).reshape(3,3)
+mat2 = np.random.randint(1,10, 9).reshape(3,3)
+
+print(mat1 + mat2)
+print(mat1 * mat2)
+print(mat1 / mat2)
+print(3*mat1 - 5*mat2)
