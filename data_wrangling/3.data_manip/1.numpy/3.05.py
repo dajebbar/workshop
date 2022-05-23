@@ -7,3 +7,5 @@ print(a)
 print("Numbers spaced apart by 2: ", np.arange(0,11,2))
 print("Numbers spaced apart by a floating point number: ", np.arange(0,11,2.5))
 print("Every 5th number from 30 in reverse order\n", np.arange(30,-1,-5))
+
+print(f'11 linearly spaced numbers between 1 and 5: {np.linspace(1,5, 11)}')
