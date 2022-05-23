@@ -11,3 +11,5 @@ print(pd.Series(data=array_1))
 print(pd.Series(data=labels))
 
 print(f'Holding functions:\n{"--"*8}\n{pd.Series(data=[sum, print, len])}')
+print(f'Holding objects from a dictionary:\n{"--"*8}\n{pd.Series(data=[d.keys, d.values, d.items])}')
+
