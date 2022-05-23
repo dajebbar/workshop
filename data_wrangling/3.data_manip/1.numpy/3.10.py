@@ -42,3 +42,11 @@ print(mat1 + mat2)
 print(mat1 * mat2)
 print(mat1 / mat2)
 print(3*mat1 - 5*mat2)
+
+# stacking arrays
+a = np.random.randn(2,4)
+b = np.random.randn(2, 4)
+print(a)
+print(b)
+print(f'Vertical stacking\n{np.vstack((a,b))}')
+print(f'Horizontal stacking\n{np.hstack([a,b])}')
