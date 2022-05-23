@@ -4,3 +4,6 @@ The capital of UK is London
 The capital of USA is Washington
 The capital of China is Beijing
 The capital of Japan is Tokyo
+The capital of Morocco is Rabat
+The capital of Italy is Rome
+The capital of Spain is Madrid
