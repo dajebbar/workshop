@@ -38,3 +38,5 @@ pcnt_25 = np.percentile(people_df.Weight, 25)
 iqr = pcnt_75 - pcnt_25
 
 print(f'Inter-quartile range: {iqr}')
+
+print(people_df.describe().T)
