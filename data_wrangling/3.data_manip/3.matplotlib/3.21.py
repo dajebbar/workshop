@@ -30,3 +30,4 @@ print(people_df.Age.count())
 
 print(people_df.Age.sum())
 print(people_df.Age.mean())
+print(people_df.Weight.median())
