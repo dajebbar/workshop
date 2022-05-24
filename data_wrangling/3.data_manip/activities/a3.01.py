@@ -26,5 +26,8 @@ new_df = df.drop(columns=['CHAS', 'NOX', 'B', 'LSTAT'])
 # print(plt.show())
 
 # print(new_df.columns)
-plt.scatter(x=new_df.CRIM, y=new_df.PRICE)
-print(plt.show())
+# plt.scatter(x=new_df.CRIM, y=new_df.PRICE)
+# print(plt.show())
+
+# plt.scatter(x=np.log(new_df.CRIM), y=new_df.PRICE)
+# print(plt.show())
