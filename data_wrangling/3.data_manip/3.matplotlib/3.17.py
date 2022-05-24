@@ -11,9 +11,11 @@ height = [160,135,170,165,173,168,175,159,105,171,155,158]
 
 # age versus weight
 
+plt.figure(figsize=(8,6))
 plt.scatter(x=age, y=weight)
-plt.title('Age vs weight')
-plt.xlabel('Age')
-plt.ylabel('Weight')
+plt.title('Age vs weight', fontsize=16)
+plt.xlabel('Age(years)', fontsize=16)
+plt.ylabel('Weight(Kg)', fontsize=16)
+plt.ylim(0, 100)
 
 plt.show()
