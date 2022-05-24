@@ -11,4 +11,9 @@ df = pd.read_csv('boston.csv')
 # print(df.head())
 
 # total number of records
-print(df.shape)
+# print(df.shape)
+
+# smaller DataFrame with columns that do not include CHAS, NOX, B, and LSTAT
+
+new_df = df.drop(columns=['CHAS', 'NOX', 'B', 'LSTAT'])
+print(new_df.head())
