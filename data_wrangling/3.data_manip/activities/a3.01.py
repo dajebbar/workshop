@@ -19,4 +19,8 @@ new_df = df.drop(columns=['CHAS', 'NOX', 'B', 'LSTAT'])
 # print(new_df.head())
 
 # nan values
-print(new_df.isna().sum())
+# print(new_df.isna().sum())
+
+# histogram
+# plt.hist(new_df)
+# print(plt.show())
