@@ -23,4 +23,8 @@ people_dict={
 }
 
 people_df=pd.DataFrame(data=people_dict)
-print(people_df)
+# print(people_df)
+
+print(people_df.shape)
+print(people_df.Age.count())
+
