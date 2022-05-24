@@ -31,3 +31,8 @@ new_df = df.drop(columns=['CHAS', 'NOX', 'B', 'LSTAT'])
 
 # plt.scatter(x=np.log(new_df.CRIM), y=new_df.PRICE)
 # print(plt.show())
+
+print(new_df.RM.mean())
+print(new_df.AGE.median())
+print(new_df.DIS.mean())
+print((new_df.PRICE < 20).mean() * 100.)
