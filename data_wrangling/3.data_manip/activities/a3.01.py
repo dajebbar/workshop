@@ -16,4 +16,7 @@ df = pd.read_csv('boston.csv')
 # smaller DataFrame with columns that do not include CHAS, NOX, B, and LSTAT
 
 new_df = df.drop(columns=['CHAS', 'NOX', 'B', 'LSTAT'])
-print(new_df.head())
+# print(new_df.head())
+
+# nan values
+print(new_df.isna().sum())
