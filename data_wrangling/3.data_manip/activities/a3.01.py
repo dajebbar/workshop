@@ -24,3 +24,7 @@ new_df = df.drop(columns=['CHAS', 'NOX', 'B', 'LSTAT'])
 # histogram
 # plt.hist(new_df)
 # print(plt.show())
+
+# print(new_df.columns)
+plt.scatter(x=new_df.CRIM, y=new_df.PRICE)
+print(plt.show())
