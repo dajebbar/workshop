@@ -8,4 +8,7 @@ url = 'https://raw.githubusercontent.com/PacktWorkshops/The-Data-Wrangling-Works
 urlretrieve(url, 'boston.csv')
 
 df = pd.read_csv('boston.csv')
-print(df.head())
+# print(df.head())
+
+# total number of records
+print(df.shape)
