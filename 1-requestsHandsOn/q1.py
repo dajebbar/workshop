@@ -5,20 +5,25 @@ response = requests.get('https://quotes.toscrape.com/')
 html = response.text
 tag_quote = '<span class="text" itemprop="text">'
 tag_author = '<small class="author" itemprop="author">'
-
+quote_name_dico = {}
 result = []
-quote_name = {}
 
-for quote, name in html.split('\n'), html.split('\n'):
-    if tag_quote in quote:
-        quote = quote.replace(tag_quote, '').replace('“', '').replace('”', '').replace('</span>', '').strip()
-    quote_name['quotes'] = quote
-    if tag_author in name:
-        name = name.replace(tag_author, '').replace('<span>', '').replace('</small>', '')
-        name = name.strip()
-    quote_name['author_names'] = name
+for line in html.split('\n'):
 
-    result.append(quote_name)
+    if tag_quote in line:
+        quote = line.replace(tag_quote, '').replace('“', '').replace('”', '').replace('</span>', '').strip()
+        
+    if tag_author in line:
+        author = line.replace(tag_author, '').replace('<span>', '').replace('</small>', '')
+        author = author.strip()
+        quote_name_dico['author_names'] = author[2:].strip()
+        quote_name_dico['quotes'] = quote
+        # print(quote_name_dico)
+        result.append(quote_name_dico.copy())
+        
+    
+# print(result)
+
 
 def write_dict(filename):
     with open(filename, 'a') as f:
