@@ -9,7 +9,7 @@ tag_author = '<small class="author" itemprop="author">'
 result = []
 quote_name = {}
 
-for quote, name in html.split('\n'):
+for quote, name in html.split('\n'), html.split('\n'):
     if tag_quote in quote:
         quote = quote.replace(tag_quote, '').replace('“', '').replace('”', '').replace('</span>', '').strip()
     quote_name['quotes'] = quote
