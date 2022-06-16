@@ -7,4 +7,4 @@ html = response.text
 tag = '<span class="text" itemprop="text">'
 for line in html.split('\n'):
     if tag in line:
-        print(line.replace(tag, '').replace('“', '').replace('”', '').replace('</span>', ''))
+        print(line.replace(tag, '').replace('“', '').replace('”', '').replace('</span>', '').strip())
