@@ -23,3 +23,10 @@ print(contact_us2)
 # by class
 product = soup.find(class_='ajax_block_product').find(class_='price product-price').get_text().strip()
 print(product)
+
+# 2-find_all findAll
+products = soup.find_all(class_='product-name')
+print(len(products))
+for p in products:
+    # p_ = p.find('a')
+    print(p.get_text().strip())
