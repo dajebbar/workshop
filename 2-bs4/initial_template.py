@@ -66,3 +66,8 @@ print(product_1_sibling)
 # go to the last product and find the previous sibling
 previous_last_product = soup.select('.ajax_block_product')[-1].find_previous_sibling().select_one('.product-name').get('title')
 print(previous_last_product)
+
+# go to the last product and find the parent
+print('*-*' * 10)
+last_product_parent = soup.select('.ajax_block_product')[-1].find_parent()
+print(last_product_parent)
