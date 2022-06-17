@@ -47,3 +47,13 @@ products_ = soup.select('.product-name')
 print(len(products_))
 for p in products_:
     print(p.get_text().strip())
+
+
+# get value of attributes vs get_text()
+# find by attribute
+article_name = soup.find(itemprop="name").find('a').get('title')
+print('---' * 10)
+print(article_name)
+
+a_n = soup.find(itemprop="name").find('a').get_text().strip()
+print(a_n)
