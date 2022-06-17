@@ -8,5 +8,7 @@ for i in range(1, 21):
     data = json.loads(data)
     with open('superstats.csv', 'a', encoding='utf-8') as f:
         for headline in data:
-            _h = headline.replace(',', '')
-            f.write(headline['headline'])
+            _h = headline['headline']
+            _h = _h.replace(',', '')
+            f.write(_h)
+            f.write('\n')
