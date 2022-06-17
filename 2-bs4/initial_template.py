@@ -57,3 +57,12 @@ print(article_name)
 
 a_n = soup.find(itemprop="name").find('a').get_text().strip()
 print(a_n)
+
+# Siblings and Parents
+# go to product N°1 and find next sibling
+product_1_sibling = soup.select_one('.ajax_block_product').find_next_sibling().select_one('.product-name').get('title')
+print(product_1_sibling)
+
+# go to the last product and find the previous sibling
+previous_last_product = soup.select('.ajax_block_product')[-1].find_previous_sibling().select_one('.product-name').get('title')
+print(previous_last_product)
