@@ -39,3 +39,11 @@ print(phone)
 
 contact_us3 = soup.select_one('#contact-link').get_text().strip()
 print(contact_us3)
+
+# select
+# select by css selector - return list of elements  - equivalent to find_all
+
+products_ = soup.select('.product-name')
+print(len(products_))
+for p in products_:
+    print(p.get_text().strip())
