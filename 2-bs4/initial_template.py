@@ -30,3 +30,12 @@ print(len(products))
 for p in products:
     # p_ = p.find('a')
     print(p.get_text().strip())
+
+
+# select_one
+# select by css selector - return first element  - equivalent to find
+phone = soup.select_one('.shop-phone').get_text().replace('Call us now:', '').strip()
+print(phone)
+
+contact_us3 = soup.select_one('#contact-link').get_text().strip()
+print(contact_us3)
