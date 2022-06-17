@@ -71,3 +71,10 @@ print(previous_last_product)
 print('*-*' * 10)
 last_product_parent = soup.select('.ajax_block_product')[-1].find_parent()
 print(last_product_parent)
+
+# Extract links
+
+# single link
+contact_us_link = soup.find(id='contact-link').find('a').get('href')
+print('---' * 20)
+print(contact_us_link)
