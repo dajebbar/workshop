@@ -78,3 +78,18 @@ print(last_product_parent)
 contact_us_link = soup.find(id='contact-link').find('a').get('href')
 print('---' * 20)
 print(contact_us_link)
+
+# multiple links
+links = []
+products_container = soup.find_all(class_='product-image-container')
+t = soup.find_all(itemprop='name')
+print('---' * 20)
+# print(type(products_container))
+# print(type(t))
+
+for l in products_container:
+    if l.find('a') != None:
+        links.append(l.find('a').get('href'))
+
+print(links)
+
