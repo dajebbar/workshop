@@ -20,4 +20,6 @@ print(contact_us)
 contact_us2 = soup.find(id='contact-link').find('a').get_text()
 print(contact_us2)
 
-# 
+# by class
+product = soup.find(class_='ajax_block_product').find(class_='price product-price').get_text().strip()
+print(product)
