@@ -9,4 +9,15 @@ response = requests.get(url)
 
 # Soup Object
 soup = BeautifulSoup(response.content, 'html.parser')
-print(soup)
+# print(soup)
+
+# Important Functions
+# 1-find
+# by id
+contact_us = soup.find(id='contact-link').get_text().strip()
+print(contact_us)
+
+contact_us2 = soup.find(id='contact-link').find('a').get_text()
+print(contact_us2)
+
+# 
