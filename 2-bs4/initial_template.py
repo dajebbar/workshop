@@ -93,3 +93,10 @@ for l in products_container:
 
 print(links)
 
+# Find Elements alternative Syntax
+subcategory = soup.find('a', {'class': 'subcategory-name'}).get_text()
+print(subcategory)
+
+contact_us_follow = soup.find('div', {'id':'contact-link'}).get_text().strip()
+print(contact_us_follow)
+
