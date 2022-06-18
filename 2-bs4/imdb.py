@@ -8,9 +8,9 @@ response = requests.get(url)
 soup = BeautifulSoup(response.content, 'html.parser')
 # print(response.status_code)
 
-principal_tag = soup.find_all('td', {'class':'titleColumn'})
-movie_name = [tag.find('a').get_text().strip() for tag in principal_tag]
-movie_year = [tag.find('span', {'class':'secondaryInfo'}).get_text().replace('(','').replace(')','').strip() for tag in principal_tag]
+principal_tag = soup.find('tbody', {'class':'lister-list'}).find_all('tr')
+movie_name = [tag.find('td', {'class':'titleColumn'}).find('a').get_text().strip() for tag in principal_tag]
+movie_year = [tag.find('td', {'class':'titleColumn'}).find('span', {'class':'secondaryInfo'}).get_text().replace('(','').replace(')','').strip() for tag in principal_tag]
 
 print(movie_name)
 print('-*-' * 50)
