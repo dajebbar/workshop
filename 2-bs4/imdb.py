@@ -21,12 +21,17 @@ movie_link = [link+tag.find('td', {'class':'titleColumn'}).find('a').get('href')
 
 movie_time =[]
 movie_genre = []
+movie_director = []
+movie_director_link = []
+director_url = 'https://www.imdb.com'
 for url_site in movie_link:
     resp2 = requests.get(url_site)
     soup2 = BeautifulSoup(resp2.content, 'html.parser')
     init_tag = soup2.find('section',{'class': 'ipc-page-section ipc-page-section--baseAlt ipc-page-section--tp-none ipc-page-section--bp-xs sc-910a7330-1 iPKxCm'})
     movie_time.append(init_tag.find('ul',{'class':'ipc-inline-list ipc-inline-list--show-dividers sc-8c396aa2-0 kqWovI baseAlt'}).find_all('li')[-1].get_text())
     movie_genre.append(init_tag.find('ul',{'class':'ipc-inline-list ipc-inline-list--show-dividers ipc-inline-list--no-wrap baseAlt'}).find('li').get_text())
+    movie_director.append(init_tag.find('a',{'class':'ipc-metadata-list-item__list-content-item ipc-metadata-list-item__list-content-item--link'}).get_text())
+    movie_director_link.append(director_url+init_tag.find('a',{'class':'ipc-metadata-list-item__list-content-item ipc-metadata-list-item__list-content-item--link'}).get('href'))
 
 
 
@@ -36,6 +41,8 @@ df = pd.DataFrame({'movies': movie_name,
             'links':movie_link,
             'times':movie_time,
             'genre':movie_genre,
+            'directors':movie_director,
+            'directors_webpage': movie_director_link,
         })
 # print(df.sample(10))
 
