@@ -48,8 +48,9 @@ df = pd.DataFrame({'movies': movie_name,
             'genre':movie_genre,
             'directors':movie_director,
             'directors_webpage': movie_director_link,
+            'recommender_movies':recommender_movies,
         })
 # print(df.sample(10))
 
-df.to_csv('imdb_top250_time_and_genre.csv', index=False)
+df.to_csv('imdb_top250_recommender_movies.csv', index=False)
 
