@@ -1,4 +1,4 @@
-from urllib import response
+import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 
@@ -15,4 +15,7 @@ movie_rating = [tag.find('td', {'class':'ratingColumn imdbRating'}).find('strong
 # print(movie_name)
 # print('-*-' * 50)
 # print(movie_year)
-print(movie_rating)
+# print(movie_rating)
+
+df = pd.DataFrame({'movies': movie_name, 'years': movie_year, 'ratings':movie_rating})
+print(df.sample(10))
