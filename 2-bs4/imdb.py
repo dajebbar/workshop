@@ -30,8 +30,14 @@ for url_site in movie_link:
 
 
 
-# df = pd.DataFrame({'movies': movie_name, 'years': movie_year, 'ratings':movie_rating, 'links':movie_link})
-# # print(df.sample(10))
+df = pd.DataFrame({'movies': movie_name, 
+            'years': movie_year, 
+            'ratings':movie_rating, 
+            'links':movie_link,
+            'times':movie_time,
+            'genre':movie_genre,
+        })
+# print(df.sample(10))
 
-# df.to_csv('imbd_top250.csv', index=False)
+df.to_csv('imdb_top250_time_and_genre.csv', index=False)
 
