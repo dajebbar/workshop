@@ -1,4 +1,3 @@
-from turtle import title
 import requests
 from bs4 import BeautifulSoup
 
@@ -17,9 +16,10 @@ response = requests.get(url)
 soup = BeautifulSoup(response.content, 'html.parser')
 principal_tag = soup.find_all('article', {'class':'product_pod'})
 book_img_link = [url+img.find('div', {'class':'image_container'}).find('a').get('href') for img in principal_tag]
-book_title = []
+book_title = [ttle.find('h3').find('a').get('title') for ttle in principal_tag]
 book_price = []
 
 # for img in principal_tag:
 #     print(img.find('div', {'class':'image_container'}).find('a').get('href'))
-print(book_img_link)
+# print(book_img_link)
+print(book_title)
