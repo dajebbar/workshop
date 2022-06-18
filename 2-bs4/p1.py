@@ -33,3 +33,6 @@ books_dict = {
 
 }
 df = pd.DataFrame(books_dict)
+
+# saving the dataframe to csv
+df.to_csv('books.csv')
