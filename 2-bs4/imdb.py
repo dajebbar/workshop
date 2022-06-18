@@ -19,7 +19,19 @@ movie_link = [link+tag.find('td', {'class':'titleColumn'}).find('a').get('href')
 # print(movie_year)
 # print(movie_rating)
 
-df = pd.DataFrame({'movies': movie_name, 'years': movie_year, 'ratings':movie_rating, 'links':movie_link})
-# print(df.sample(10))
+movie_time =[]
+movie_genre = []
+for url_site in movie_link:
+    resp2 = requests.get(url_site)
+    soup2 = BeautifulSoup(resp2.content, 'html.parser')
+    init_tag = soup2.find('section',{'class': 'ipc-page-section ipc-page-section--baseAlt ipc-page-section--tp-none ipc-page-section--bp-xs sc-910a7330-1 iPKxCm'})
+    movie_time.append(init_tag.find('ul',{'class':'ipc-inline-list ipc-inline-list--show-dividers sc-8c396aa2-0 kqWovI baseAlt'}).find_all('li')[-1].get_text())
+    movie_genre.append(init_tag.find('ul',{'class':'ipc-inline-list ipc-inline-list--show-dividers ipc-inline-list--no-wrap baseAlt'}).find('li').get_text())
 
-df.to_csv('imbd_top250.csv', index=False)
+
+
+# df = pd.DataFrame({'movies': movie_name, 'years': movie_year, 'ratings':movie_rating, 'links':movie_link})
+# # print(df.sample(10))
+
+# df.to_csv('imbd_top250.csv', index=False)
+
