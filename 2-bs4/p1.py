@@ -1,3 +1,4 @@
+from turtle import title
 import requests
 from bs4 import BeautifulSoup
 
@@ -10,4 +11,15 @@ url = 'https://books.toscrape.com/'
 response = requests.get(url)
 
 # status code
-print(response.status_code)
+# print(response.status_code)
+
+# soup object
+soup = BeautifulSoup(response.content, 'html.parser')
+principal_tag = soup.find_all('article', {'class':'product_pod'})
+book_img_link = [url+img.find('div', {'class':'image_container'}).find('a').get('href') for img in principal_tag]
+book_title = []
+book_price = []
+
+# for img in principal_tag:
+#     print(img.find('div', {'class':'image_container'}).find('a').get('href'))
+print(book_img_link)
