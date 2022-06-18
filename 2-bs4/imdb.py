@@ -18,4 +18,6 @@ movie_rating = [tag.find('td', {'class':'ratingColumn imdbRating'}).find('strong
 # print(movie_rating)
 
 df = pd.DataFrame({'movies': movie_name, 'years': movie_year, 'ratings':movie_rating})
-print(df.sample(10))
+# print(df.sample(10))
+
+df.to_csv('imbd_top250.csv', index=False)
