@@ -34,13 +34,12 @@ for url_site in movie_link:
     movie_director_link.append(director_url+init_tag.find('a',{'class':'ipc-metadata-list-item__list-content-item ipc-metadata-list-item__list-content-item--link'}).get('href'))
 
 
-recommender_movies = []
 for dir_link in movie_director_link:
     resp3 = requests.get(dir_link)
     soup3 = BeautifulSoup(resp3.content, 'html.parser')
-    tag_container = soup3.find('div', {'class':'article'}).find_all('div', {'class':'knownfor-title-role'})[1:]
-    recommender_movies.append(tag_container.find('a').get_text().strip())
-    
+    tag_container = soup3.find_all('div', {'class':'knownfor-title-role'})[1:]
+    recommender_movies = [tag.find('a').get('title') for tag in tag_container]
+
 df = pd.DataFrame({'movies': movie_name, 
             'years': movie_year, 
             'ratings':movie_rating, 
